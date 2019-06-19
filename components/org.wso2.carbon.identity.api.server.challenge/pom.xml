@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>org.wso2.carbon.identity.api.server.challenge.v10</module>
+        <module>org.wso2.carbon.identity.api.server.challenge.v1</module>
     </modules>
 
 </project>
