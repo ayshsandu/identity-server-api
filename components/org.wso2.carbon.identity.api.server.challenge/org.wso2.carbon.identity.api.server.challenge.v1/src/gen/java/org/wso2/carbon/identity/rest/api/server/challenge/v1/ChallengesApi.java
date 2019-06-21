@@ -1,5 +1,6 @@
 package org.wso2.carbon.identity.rest.api.server.challenge.v1;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.wso2.carbon.identity.rest.api.server.challenge.v1.dto.*;
 import org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApiService;
 import org.wso2.carbon.identity.rest.api.server.challenge.v1.factories.ChallengesApiServiceFactory;
@@ -27,7 +28,8 @@ import javax.ws.rs.*;
 @io.swagger.annotations.Api(value = "/challenges", description = "the challenges API")
 public class ChallengesApi  {
 
-   private final ChallengesApiService delegate = ChallengesApiServiceFactory.getChallengesApi();
+   @Autowired
+   private ChallengesApiService delegate;
 
     @PATCH
     @Path("/{challenge-set-id}")
